@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Situational Awareness 2026 — $45B → $10B: verified on live data</title>
+<style>
+:root{--bg:#0b1020;--card:#151c33;--ink:#eef1ff;--mut:#a9b2d6;--acc:#5eead4;--red:#fb7185;--grn:#34d399;--line:#263054}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:radial-gradient(1200px 600px at 20% -10%,#1b2a5e 0%,var(--bg) 55%) fixed,var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+.hero{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border:1px solid var(--line);border-radius:20px;padding:36px;text-align:center}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin:4px;font-size:13px;color:var(--ink);background:rgba(255,255,255,.04)}
+h1{font-size:42px;margin:14px 0 6px}.sub{color:var(--mut);font-size:18px;max-width:760px;margin:0 auto}
+.ceo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:22px 0;text-align:left;font-size:17px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 8px}.num{font-size:30px;font-weight:800}.neg{color:var(--red)}.pos{color:var(--grn)}
+img.chart{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--mut)}
+code,pre{background:#0a0f22;border:1px solid var(--line);border-radius:10px}pre{padding:14px;overflow:auto}
+.btn{display:inline-block;background:var(--acc);color:#04211c;font-weight:800;border-radius:12px;padding:12px 20px;text-decoration:none;margin:6px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.step{display:flex;gap:12px;margin:10px 0}.step b{background:var(--acc);color:#04211c;border-radius:50%;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+footer{color:var(--mut);margin-top:30px;font-size:13px}
+.video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000}
+@media(max-width:640px){h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div><span class="badge">MIT</span><span class="badge">Python 3.12</span><span class="badge">Docker one-command</span><span class="badge">Live Yahoo Finance</span><span class="badge">4 experiments PASS</span></div>
+<h1>$45B → $10B in 30 days.<br>Verified, charted, reproducible.</h1>
+<p class="sub">The forensic lab that replays the Situational Awareness AI-fund blowup (+439% then −67%) on <b>live public market data</b> — so you can see the leverage math with your own eyes and never repeat it.</p>
+<p><a class="btn" href="#start">Run it in 2 minutes</a> <a class="btn ghost" href="#demo">Watch the 20-sec demo</a></p>
+</div>
+<div class="ceo">
+<b>CEO summary (30 seconds):</b> a 24-year-old turned an AI thesis into $45B at +439% using ~4× borrowed money piled on the same AI-infrastructure stocks while shorting software. In July 2026 the longs fell 20–47% <i>and</i> the shorts rose 22% at the same time. At 4×, that is a margin call: banks demanded cash, the fund was forced to dump a $16B book to Citadel at a discount, landing at ~$10B (−67% in one month). Direction was arguably right long-term; survival was not — because leverage turns “right but early/late by a month” into ruin. This repo proves that sentence with downloadable numbers, pictures, and 4 green checkmarks.
+</div>
+<div class="grid">
+<div class="card"><h3>H1 2026</h3><div class="num pos">+439%</div><div>reported net; basket mean +286% unlevered → ×4 ≈ +1,145% gross</div></div>
+<div class="card"><h3>July 2026</h3><div class="num neg">−67%</div><div>fund month; basket −33.2% ×4 = −133% full-hold → −67% after forced sale</div></div>
+<div class="card"><h3>Leverage</h3><div class="num">4×</div><div>at 25% maintenance = <b>zero buffer</b>: any red month calls</div></div>
+<div class="card"><h3>Aftermath</h3><div class="num">~$10B</div><div>kept private Anthropic ~$5B; Citadel bought $16B book; SEC probe</div></div>
+</div>
+<h2 id="demo">🎬 Demo (GIF + video — same file, two ways to watch)</h2>
+<div class="card">
+<img class="chart" src="docs/demo.gif" alt="Animated equity curve: $1 in AI basket x4 rises then crashes in July 2026">
+<p style="color:var(--mut)">Above: auto-playing GIF (works directly in GitHub README). Below: same clip as MP4 with controls.</p>
+<video class="video" controls preload="metadata" src="docs/demo.mp4"></video>
+<p style="color:var(--mut)">Want the 2-minute narrated version? Record your terminal with the script in <code>docs/RECORDING.md</code> (ffmpeg one-liner), upload to YouTube, and paste the link here + in README — thumbnail pattern included.</p>
+</div>
+<h2>📊 The three pictures that make you a professional</h2>
+<div class="card"><h3>1 — July 2026 bars: longs down, short up (the double-kill)</h3><img class="chart" src="docs/july_drawdown.png"></div>
+<div class="card"><h3>2 — Same basket ×4: miracle then margin call (log scale)</h3><img class="chart" src="docs/equity_curve.png"></div>
+<div class="card"><h3>3 — Winners became losers: Jan–Jun vs July rotation</h3><img class="chart" src="docs/runup_vs_july.png"></div>
+<h2>📋 Verified holdings table (live, auto-adjusted closes)</h2>
+<div class="card"><table><tr><th>Holding</th><th>Role</th><th>30-Jun → 31-Jul 2026</th></tr>
+<tr><td>NBIS Nebius</td><td>long compute</td><td class="neg">−31.1%</td></tr>
+<tr><td>CRWV CoreWeave</td><td>long compute</td><td class="neg">−27.9%</td></tr>
+<tr><td>MU Micron</td><td>long memory</td><td class="neg">−28.7%</td></tr>
+<tr><td>SNDK SanDisk</td><td>long memory</td><td class="neg">−46.6%</td></tr>
+<tr><td>000660.KS SK Hynix</td><td>long memory</td><td class="neg">−35.2%</td></tr>
+<tr><td>BE Bloom Energy</td><td>long power</td><td class="neg">−32.0%</td></tr>
+<tr><td>INTC Intel</td><td>long chips</td><td class="neg">−35.4%</td></tr>
+<tr><td>ADBE Adobe</td><td><b>short</b> software</td><td class="pos">+22.1% (against the short)</td></tr>
+<tr><td>SOXX / QQQ</td><td>benchmarks</td><td>−21.2% / −6.6%</td></tr></table></div>
+<h2 id="start">🚀 Start here (2 minutes, copy-paste)</h2>
+<div class="card"><pre>git clone &lt;your-fork-url&gt; && cd situational-awareness-blowup-lab-2026
+docker compose up
+# without docker:
+pip install -r requirements.txt
+python3 experiments/01_verify_holdings_drawdown.py
+python3 experiments/02_leverage_439_to_minus67.py
+python3 experiments/03_longshort_doublekill.py
+python3 experiments/04_hidden_patterns_benchmark.py</pre>
+<p>Green output = proof. JSON numbers land in <code>benchmarks/*.json</code>.</p></div>
+<h2>🔎 Hidden patterns found (the reason to star this)</h2>
+<div class="grid">
+<div class="card"><h3>P1 · Correlation spike</h3>7 infra longs: mean correlation <b>0.44 → 0.81</b> in July. Diversification dies when leverage needs it most.</div>
+<div class="card"><h3>P2 · Vulture bounce</h3><b>7/7</b> names green 2 weeks after Jul-30 block (NBIS +47%, CRWV +42%). Forced seller marked the bottom.</div>
+<div class="card"><h3>P3 · Same recipe 30y</h3>LTCM 25× → Amaranth → Archegos → SA 4×. Genius + concentration + leverage + vanishing liquidity. Citadel bought 2006 <i>and</i> 2026.</div>
+<div class="card"><h3>P4 · Disclosure trap</h3>13F/letters/tweets made the book huntable (“bank run” in fund’s own words). Next crowded book will hide.</div>
+</div>
+<footer>Educational research only — not investment advice. Public data (Yahoo Finance), fair-use facts. Open it locally: <code>python3 -m http.server</code> then open this file, or just read the README — same story, same numbers.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+services:
+  lab:
+    build: .
+    volumes:
+      - ./:/lab
+      - ./data:/lab/data
+    working_dir: /lab
+    command: bash -c "python3 experiments/01_verify_holdings_drawdown.py && python3 experiments/02_leverage_439_to_minus67.py && python3 experiments/03_longshort_doublekill.py && python3 experiments/04_hidden_patterns_benchmark.py"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=UTC
+  notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/lab
+    command: bash -c "pip install jupyter && jupyter notebook --ip=0.0.0.0 --allow-root --no-browser"
+    profiles: ["notebook"]

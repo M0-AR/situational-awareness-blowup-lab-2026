@@ -1,0 +1,56 @@
+{
+  "correlations": {
+    "H1": 0.4403895454394898,
+    "July": 0.812037257357792
+  },
+  "bounce_pct_2wk": {
+    "NBIS": 47.4,
+    "CRWV": 42.4,
+    "MU": 11.1,
+    "SNDK": 28.2,
+    "BE": 11.0,
+    "INTC": 12.5,
+    "IREN": 15.2
+  },
+  "history": [
+    {
+      "fund": "LTCM 1998",
+      "leverage": 25,
+      "trigger": "Russia default",
+      "loss": "~$4.6B",
+      "rescue": "Fed 14-bank $3.6B"
+    },
+    {
+      "fund": "Amaranth 2006",
+      "leverage": "~5 (concentrated gas)",
+      "trigger": "gas spread collapse",
+      "loss": "~$6B/1wk",
+      "rescue": "Citadel+JPM took book"
+    },
+    {
+      "fund": "Archegos 2021",
+      "leverage": "~5-8 via TRS",
+      "trigger": "ViacomCBS drop",
+      "loss": "~$20B days",
+      "rescue": "none; CS lost $5.5B, Hwang 18y"
+    },
+    {
+      "fund": "Situational Awareness 2026",
+      "leverage": 4,
+      "trigger": "AI-infra -30% + software short +22%",
+      "loss": "$45B->$10B, -67% July",
+      "rescue": "Citadel $16B block @ discount; SEC probe"
+    }
+  ],
+  "hidden_patterns": {
+    "P1_crowded_correlation_spike": {
+      "H1": 0.44,
+      "July": 0.812,
+      "claim": "Correlations spike in stress; diversification evaporates exactly when leverage needs it."
+    },
+    "P2_vulture_bounce_rate_pct": 100.0,
+    "P2_note": "100% of basket green 2wk after Jul-30 block \u2014 forced seller was the bottom (vulture alpha).",
+    "P3_same_recipe": "genius + concentration + leverage + liquidity-vanish + Citadel-as-buyer repeats 1998->2006->2021->2026.",
+    "P4_transparency_paradox": "13F/letter disclosure made the book huntable; next crowded book will hide (Hypothesis for future work)."
+  }
+}
